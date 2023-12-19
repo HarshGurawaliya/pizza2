@@ -5,8 +5,7 @@
   "main": "backend1.js",
   "scripts": {
     "start": "node backend1.js",
-    "build-frontend": "cd frontend && npm install && npm run build",
-    
+    "build-frontend": "cd frontend && npm install && npm run build"
   },
   "author": "harshgurawaliya",
   "license": "ISC",
@@ -19,4 +18,3 @@
     "concurrently": "^8.2.2"
   }
 }
-
