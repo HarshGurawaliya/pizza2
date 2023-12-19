@@ -6,7 +6,7 @@ const { chatLogic } = require('./app');
 
 const app = express();
 
-// Removed CORS middleware
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
