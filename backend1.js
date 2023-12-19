@@ -12,7 +12,7 @@ app.use(cors({
 }));
 
 // Serve static files from the frontend app
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 const server = http.createServer(app);
 const io = socketIO(server, {
