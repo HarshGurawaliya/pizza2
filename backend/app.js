@@ -19,7 +19,7 @@ function makeMenu() {
 }
 
 function clearSession(session) {
-    session.currentState = 'waitingToStart';
+    session.currentState = 'wStart';
     session.orderInfo = {};
 }
 
@@ -27,7 +27,7 @@ function chatLogic(socket, userSessions, usrMes) {
     var currentSession = userSessions[socket.id];
 
     switch (currentSession.currentState) {
-        case 'waitingToStart':
+        case 'wStart':
             if (usrMes.toLowerCase() === 'yes') {
                 socket.emit('botmes', "Here is Today's MENU\n" + makeMenu());
                 currentSession.currentState = 'choosingPizza';
